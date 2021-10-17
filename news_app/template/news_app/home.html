@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<title> Current News</title>
+
+{%load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}"
+
+</head>
+<body>
+<div class="header">
+
+    <div class="box">
+    
+
+
+<h1>Current News</h1>
+</div>
+
+
+<div class="searchbox">
+<form action="" method="get">
+<input type="text" placeholder="Search News..." name="category" >
+<input type="submit" value="Search">
+</form>
+</div>
+
+</div>
+
+<div class="content">
+{%for i in articles%}
+
+<div class="card">
+<img src="{{i.urlToImage}}" height="200px" width="200px">
+
+<p class="auth">{{i.author}}</p>
+<div class="line"></div>
+<p class="title">{{i.title}}</p>
+<p class="title">{{i.source.name}}</p>
+<p class="desc">{{i.description}}</p>
+
+<a href="{{i.url}}" target="_blank" class="link">See more</a>
+
+<p class="date">Date at:{{i.publishedAt}}</p>
+</div>
+{% endfor %}
+</div>
+
+
+
+<div class="bottomhd">
+<div class="detail">
+<h2>News of category
+ </h2>
+<ul class="list">
+
+<li>business</li>
+
+<li>entertainment</li>
+
+<li>health</li>
+
+<li>science</li>
+
+<li>technology</li>
+</ul>
+
+</div>
+<div class="headrerln"></div>
+<p>Created and Desigen by</p><br>
+<p class="name">Pavan8518</p><br>
+<p class="mob">Gmail:sharadkum9@gmail.com ,mobile:8269656605</p>
+</div>
+
+
+</body>
+
+</html>
