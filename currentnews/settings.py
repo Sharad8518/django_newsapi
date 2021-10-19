@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure--6@n)m_&l@30kln65!b*tvuwje%9ho)+-s7g^0$zkbydlvh6_7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [' https://sharad8518.github.io/django_newsapi/']
 
 
 # Application definition
